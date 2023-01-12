@@ -34,7 +34,7 @@ fun toN(num: String, base: Int): BigInteger {
         rezult += num[i].toString().toBigInteger(36) * base.toBigInteger().pow(num.length - 1 - i)
     }
     return rezult
-} // из данной в десятичную - целое
+} 
 fun fromN(num: BigInteger, base: Int): String {
     var num = num
     var str = ""
@@ -49,14 +49,14 @@ fun fromN(num: BigInteger, base: Int): String {
         val otv = str.reversed()
         return otv
     }
-} // из десятичной в необходимую - целое
+} 
 fun toF(fract: String, base: Int): Double {
     var rezult = 0.0
     for (i in 0..fract.length - 1) {
         rezult += fract[i].toString().toInt(36) * base.toDouble().pow(- 1 - i)
     }
     return rezult
-} // из данной в десятичную - дробное
+} 
 fun fromF(fract: Double , base: Int): String {
     var i = 0
     var fract = fract
@@ -71,4 +71,4 @@ fun fromF(fract: Double , base: Int): String {
         i++
     }
     return rez
-} // из десятичной в необходимую - дробное
+} 
